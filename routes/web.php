@@ -7,5 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+Route::resource('products', ProductController::class);

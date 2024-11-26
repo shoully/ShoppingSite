@@ -31,6 +31,7 @@
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Total Value</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -41,6 +42,9 @@
                         <td>{{ $product->quantity }}</td>
                         <td>{{ $product->price }}</td>
                         <td>{{ $product->total_value }}</td>
+                        <td>
+                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                        </td>
                     </tr>
                 @endforeach
             @endforeach
